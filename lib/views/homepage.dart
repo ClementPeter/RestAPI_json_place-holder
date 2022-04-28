@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //List of Tab Pages assigned to each BottomNavBar
   List<Widget> tabWidget = [
     const PostPage(),
-    const PhotoPage(),
+    //const PhotoPage(),
     //const UserPage(),
   ];
 

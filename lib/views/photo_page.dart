@@ -1,83 +1,83 @@
-import 'package:flutter/material.dart';
-import 'package:rest_api_jsonplaceholder/models/photo.dart';
-import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
+// import 'package:flutter/material.dart';
+// import 'package:rest_api_jsonplaceholder/models/photo.dart';
+// import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 
-class PhotoPage extends StatefulWidget {
-  const PhotoPage({Key? key}) : super(key: key);
+// class PhotoPage extends StatefulWidget {
+//   const PhotoPage({Key? key}) : super(key: key);
 
-  @override
-  State<PhotoPage> createState() => _PhotoPageState();
-}
+//   @override
+//   State<PhotoPage> createState() => _PhotoPageState();
+// }
 
-class _PhotoPageState extends State<PhotoPage> {
-  //List to store Photo data from API
-  List<Photo>? photo;
-  //boolean to check if data has finished loading
-  var isLoaded = false;
+// class _PhotoPageState extends State<PhotoPage> {
+//   //List to store Photo data from API
+//   List<Photo>? photo;
+//   //boolean to check if data has finished loading
+//   var isLoaded = false;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    getData();
-  }
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     super.initState();
+//     getData();
+//   }
 
-  //function to get photos
-  getData() async {
-    photo = await RemoteServices().getPhotos();
-    if (photo != null) {
-      setState(() {
-        //print(" post: $photo");
-        isLoaded = true;
-      });
-    }
-  }
+//   //function to get photos
+//   getData() async {
+//     photo = await RemoteServices().getPhotos();
+//     if (photo != null) {
+//       setState(() {
+//         //print(" post: $photo");
+//         isLoaded = true;
+//       });
+//     }
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Visibility(
-      visible: isLoaded,
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4,
-        ),
-        itemCount: photo?.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 80,
-              width: 80,
-              decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
-              child: Column(
-                children: [
-                  Text(
-                    photo![index].id.toString(),
-                    style: const TextStyle(color: Colors.black),
-                  ),
-                  Expanded(
-                    child: isLoaded
-                        ? Image.network(photo![index].url)
-                        : const CircularProgressIndicator(),
-                  )
-                ],
-              ),
-            ),
-          );
-        },
-      ),
-      replacement: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text('Loading Photos from API'),
-            SizedBox(height: 10.0),
-            CircularProgressIndicator()
-          ],
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Visibility(
+//       visible: isLoaded,
+//       child: GridView.builder(
+//         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+//           crossAxisCount: 4,
+//         ),
+//         itemCount: photo?.length,
+//         itemBuilder: (BuildContext context, int index) {
+//           return Padding(
+//             padding: const EdgeInsets.all(8.0),
+//             child: Container(
+//               height: 80,
+//               width: 80,
+//               decoration: const BoxDecoration(
+//                   color: Colors.grey,
+//                   borderRadius: BorderRadius.all(Radius.circular(10.0))),
+//               child: Column(
+//                 children: [
+//                   Text(
+//                     photo![index].id.toString(),
+//                     style: const TextStyle(color: Colors.black),
+//                   ),
+//                   Expanded(
+//                     child: isLoaded
+//                         ? Image.network(photo![index].url)
+//                         : const CircularProgressIndicator(),
+//                   )
+//                 ],
+//               ),
+//             ),
+//           );
+//         },
+//       ),
+//       replacement: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: const [
+//             Text('Loading Photos from API'),
+//             SizedBox(height: 10.0),
+//             CircularProgressIndicator()
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
