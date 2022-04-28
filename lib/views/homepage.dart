@@ -13,12 +13,12 @@ class MyHomePage extends StatefulWidget {
 
 //
 class _MyHomePageState extends State<MyHomePage> {
-  //Bottom Nav bar Selction
+  //Bottom Nav bar Selection
   int _selectedIndex = 0;
   //List of Tab Pages assigned to each BottomNavBar
   List<Widget> tabWidget = [
     const PostPage(),
-    //const PhotoPage(),
+    const PhotoPage(),
     //const UserPage(),
   ];
 
@@ -49,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
         onTap: (index) => setState(
           () => _selectedIndex = index,
         ),
-        // selectedItemColor: Theme.of(context).accentColor,
       ),
     );
   }
