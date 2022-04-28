@@ -23,22 +23,21 @@ class RemoteServices {
     }
   }
 
-  //
-  // // Function to make Network Calls from json placeholder "photos" request
-  // Future<List<Photo>?> getPhotos() async {
-  //   var uri = Uri.parse('https://jsonplaceholder.typicode.com/photos');
-  //   var response = await client.get(uri);
+  // Function to make Network Calls from json placeholder "photos" request
+  Future<List<Photo>?> getPhotos() async {
+    var uri = Uri.parse('https://jsonplaceholder.typicode.com/photos');
+    var response = await client.get(uri);
 
-  //   //Check for response
-  //   if (response.statusCode == 200) {
-  //     var json = response.body;
+    //Check for response
+    if (response.statusCode == 200) {
+      var json = response.body;
 
-  //     return photoFromJson(json);
-  //   } else {
-  //     print('${response.statusCode}');
-  //   }
-  //   //print(response.body);
-  // }
+      return photoFromJson(json);
+    } else {
+      print('${response.statusCode}');
+    }
+    //print(response.body);
+  }
 
   //  // // Function to make Network Calls from json placeholder "photos" request
   // Future<List<User>?> getUsers() async {

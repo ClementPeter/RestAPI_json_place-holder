@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:rest_api_jsonplaceholder/models/post.dart';
-//import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 import 'package:rest_api_jsonplaceholder/views/photo_page.dart';
 import 'package:rest_api_jsonplaceholder/views/post_page.dart';
 import 'package:rest_api_jsonplaceholder/views/user_page.dart';
@@ -20,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //List of Tab Pages assigned to each BottomNavBar
   List<Widget> tabWidget = [
     const PostPage(),
-    //const PhotoPage(),
+    const PhotoPage(),
     //const UserPage(),
   ];
 
