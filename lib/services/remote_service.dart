@@ -31,8 +31,8 @@ class RemoteServices {
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
-        print('${response.statusCode}');  
-        print(response.body);
+      print('${response.statusCode}');
+      print(response.body);
 
       return photoFromJson(json);
     } else {
@@ -42,20 +42,18 @@ class RemoteServices {
   }
 
   //  // // Function to make Network Calls from json placeholder "photos" request
-  // Future<List<User>?> getUsers() async {
-  //   var uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
-  //   var response = await client.get(uri);
+  Future<List<User>?> getUsers() async {
+    var uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
+    var response = await client.get(uri);
 
-  //   //Check for response
-  //   if (response.statusCode == 200) {
-
-  //     var json = response.body;
-  //     print(response.body);
-  //     return userFromJson(json);
-  //   } else {
-  //     print('${response.statusCode}');
-  //   }
-  //   //print(response.body);
-  // }
-
+    //Check for response
+    if (response.statusCode == 200) {
+      var json = response.body;
+      // print(response.body);
+      return userFromJson(json);
+    } else {
+      //print('${response.statusCode}');
+    }
+    //print(response.body);
+  }
 }

@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> tabWidget = [
     const PostPage(),
     const PhotoPage(),
-    //const UserPage(),
+    const UserPage(),
   ];
 
   @override
@@ -40,10 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.photo),
             label: 'Photos',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.account_circle),
-          //   label: 'Users',
-          // )
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'Users',
+          )
         ],
         currentIndex: _selectedIndex,
         onTap: (index) => setState(
