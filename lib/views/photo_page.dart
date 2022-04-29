@@ -49,8 +49,11 @@ class _PhotoPageState extends State<PhotoPage> {
               height: 80,
               width: 80,
               decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                color: Colors.grey,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
+              ),
               child: Column(
                 children: [
                   Text(
@@ -59,7 +62,8 @@ class _PhotoPageState extends State<PhotoPage> {
                   ),
                   Expanded(
                     child: isLoaded
-                        ? Image.network(photo![index].url)
+                        ? Image.network(photo![index].url,
+                            fit: BoxFit.cover, scale: 0.5)
                         : const CircularProgressIndicator(),
                   )
                 ],

@@ -31,6 +31,8 @@ class RemoteServices {
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
+        print('${response.statusCode}');  
+        print(response.body);
 
       return photoFromJson(json);
     } else {
