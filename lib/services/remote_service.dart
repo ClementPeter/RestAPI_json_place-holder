@@ -7,7 +7,7 @@ import 'package:rest_api_jsonplaceholder/models/users.dart';
 class RemoteServices {
   //setup http client to handle multiple request
   var client = http.Client();
-  //
+
   // Function to make Network Calls from json placeholder "post" request
   Future<List<Post>?> getPost() async {
     //setup http client
@@ -31,17 +31,12 @@ class RemoteServices {
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
-      print('${response.statusCode}');
-      print(response.body);
-
       return photoFromJson(json);
-    } else {
-      print('${response.statusCode}');
-    }
-    //print(response.body);
+    } else {}
   }
 
-  //  // // Function to make Network Calls from json placeholder "photos" request
+  //
+  //Function to make Network Calls from json placeholder "photos" request
   Future<List<User>?> getUsers() async {
     var uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
     var response = await client.get(uri);
@@ -49,11 +44,8 @@ class RemoteServices {
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
-      // print(response.body);
+
       return userFromJson(json);
-    } else {
-      //print('${response.statusCode}');
-    }
-    //print(response.body);
+    } else {}
   }
 }

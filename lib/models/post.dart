@@ -34,5 +34,5 @@ class Post {
 List<Post> postFromJson(String str) =>
     List<Post>.from(json.decode(str).map((x) => Post.fromJson(x)));
 
-    //Not used in the code
+//Not used in the code
 //String postToJson(List<Post> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 class Photo {
   Photo({
-     this.albumId,
+    this.albumId,
     required this.id,
     required this.title,
     required this.url,
@@ -23,6 +23,7 @@ class Photo {
         thumbnailUrl: json["thumbnailUrl"],
       );
 
+  //Not used in the code
   // Map<String, dynamic> toJson() => {
   //     "albumId": albumId,
   //     "id": id,
@@ -35,4 +36,6 @@ class Photo {
 List<Photo> photoFromJson(String str) =>
     List<Photo>.from(json.decode(str).map((x) => Photo.fromJson(x)));
 
+
+ //Not used in the code
 //String photoToJson(List<Photo> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));

@@ -36,11 +36,7 @@ class _PostPageState extends State<PostPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Post'),
-      //   centerTitle: true,
-      // ),
+    return Scaffold( 
       body: Visibility(
         visible: isLoaded,
         child: ListView.builder(
@@ -109,8 +105,7 @@ class _PostPageState extends State<PostPage> {
               CircularProgressIndicator()
             ],
           ),
-        ),
-        //replacement: const Center(child: CircularProgressIndicator()),
+        ),        
       ),
     );
   }

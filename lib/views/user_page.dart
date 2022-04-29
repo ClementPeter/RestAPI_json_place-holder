@@ -21,7 +21,7 @@ class _UserPageState extends State<UserPage> {
     // TODO: implement initState
     super.initState();
     getData();
-    print("ran get Data");
+    //print("ran get Data");
   }
 
   //function to get Data from API
@@ -60,22 +60,18 @@ class _UserPageState extends State<UserPage> {
                     ),
                     //ID,
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
                         const Text(
                           'id : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
                         Text(
                           user![index].id.toString(),
                           style: const TextStyle(
-                            //fontWeight: FontWeight.,
-                            // fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -91,8 +87,6 @@ class _UserPageState extends State<UserPage> {
                         const Text(
                           'Name : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -100,8 +94,6 @@ class _UserPageState extends State<UserPage> {
                         Text(
                           user![index].name,
                           style: const TextStyle(
-                            //fontWeight: FontWeight.,
-                            // fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -112,8 +104,6 @@ class _UserPageState extends State<UserPage> {
                         const Text(
                           'Username : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -123,8 +113,6 @@ class _UserPageState extends State<UserPage> {
                             user![index].username,
                             style: const TextStyle(
                               overflow: TextOverflow.ellipsis,
-                              //fontWeight: FontWeight.,
-                              //fontStyle: FontStyle.italic,
                               fontSize: 16.0,
                             ),
                           ),
@@ -135,8 +123,6 @@ class _UserPageState extends State<UserPage> {
                       height: 20.0,
                     ),
                     //
-
-                    //
                     //Email
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -145,16 +131,12 @@ class _UserPageState extends State<UserPage> {
                         const Text(
                           'email : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
                         Text(
                           user![index].email,
                           style: const TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -214,7 +196,6 @@ class _UserPageState extends State<UserPage> {
                         ),
                         Text(
                           "lat: ${user![index].address.geo.lat},",
-                          //user![index].address.geo.lat,
                           style: const TextStyle(
                             fontSize: 16.0,
                           ),
@@ -224,7 +205,6 @@ class _UserPageState extends State<UserPage> {
                         ),
                         Text(
                           "long: ${user![index].address.geo.lng},",
-                          //user![index].address.geo.lat,
                           style: const TextStyle(
                             fontSize: 16.0,
                           ),
@@ -234,11 +214,9 @@ class _UserPageState extends State<UserPage> {
                         ),
                       ],
                     ),
-
                     const SizedBox(
                       height: 20.0,
                     ),
-                    //
                     //phone number
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -268,16 +246,12 @@ class _UserPageState extends State<UserPage> {
                         const Text(
                           'website : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
                         Text(
                           user![index].website,
                           style: const TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -291,16 +265,12 @@ class _UserPageState extends State<UserPage> {
                         const Text(
                           'Company : ',
                           style: TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
                         Text(
                           user![index].company.name,
                           style: const TextStyle(
-                            //fontWeight: FontWeight.,
-                            //fontStyle: FontStyle.italic,
                             fontSize: 16.0,
                           ),
                         ),
@@ -314,11 +284,10 @@ class _UserPageState extends State<UserPage> {
                           child: Text(
                             "${user![index].company.catchPhrase} ${user![index].company.bs} ",
                             style: const TextStyle(
-                           
                               fontSize: 16.0,
                             ),
                           ),
-                        ),  
+                        ),
                       ],
                     ),
                   ],
