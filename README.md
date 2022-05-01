@@ -4,7 +4,7 @@
 This flutter project helps to Integrate API resources from JSON Place Holder API
 API Source: https://jsonplaceholder.typicode.com/
 
-Resources Integrated:
+### Resources Integrated:
 /posts  :  https://jsonplaceholder.typicode.com/posts
 
 /album  :  https://jsonplaceholder.typicode.com/albums
@@ -13,6 +13,8 @@ Resources Integrated:
 
 
 ### Features Implemented
+> API Consumption : HTTP GET REQUEST
+> Simple Layout : Scrollable , Bottom Navigation Bar
 
 
 - [x] Web
