@@ -14,6 +14,7 @@ API Source: https://jsonplaceholder.typicode.com/
 
 ### Features Implemented
 > API Consumption : HTTP GET REQUEST
+
 > Simple Layout : Scrollable , Bottom Navigation Bar
 
 
