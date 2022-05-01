@@ -33,18 +33,3 @@ Resources Integrated:
 ![Screenshot_20220429-211832](https://user-images.githubusercontent.com/61213263/166076110-1e81a9ec-9978-4032-9ea7-5f38b2586c1a.png)
 
 ![Screenshot_20220429-211856](https://user-images.githubusercontent.com/61213263/166076276-2a0e951f-696d-4786-8592-7a39e8542057.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
