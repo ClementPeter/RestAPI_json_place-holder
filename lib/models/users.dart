@@ -1,5 +1,4 @@
 //Class that deserializes the json data from "Users"  and models it
-
 import 'dart:convert';
 
 List<User> userFromJson(String str) =>
