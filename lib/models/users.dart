@@ -1,24 +1,3 @@
-// // To parse this JSON data, do
-// //
-// //     final user = userFromJson(jsonString);
-
-// import 'dart:convert';
-
-// //Uaser Model Class to deserialize and pass json
-
-// class User {
-//   User({
-//     required this.id,
-//     required this.name,
-//     required this.username,
-//     required this.email,
-//     //required this.address,
-//     required this.phone,
-//     required this.website,
-//     //address,
-//     required this.company,
-//   });
-
 //Class that deserializes the json data from "Users"  and models it
 
 import 'dart:convert';
