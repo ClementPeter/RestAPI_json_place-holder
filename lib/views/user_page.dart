@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rest_api_jsonplaceholder/models/users.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 
+//Class that shows User Datails inside Individual Card
+
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
 
@@ -302,7 +304,7 @@ class _UserPageState extends State<UserPage> {
             children: const [
               Text('Loading Users from API'),
               SizedBox(height: 10.0),
-              CircularProgressIndicator()
+              CircularProgressIndicator(),
             ],
           ),
         ),
