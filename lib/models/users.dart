@@ -19,36 +19,6 @@
 //     required this.company,
 //   });
 
-//   int id;
-//   String name;
-//   String username;
-//   String email;
-//   //JsonCodec address;
-//   String phone;
-//   String website;
-//   String company;
-
-//   factory User.fromJson(Map<String, dynamic> json) => User(
-//         id: json["id"],
-//         name: json["name"],
-//         username: json["username"],
-//         email: json["email"],
-//         //address: json["address"]["street"]["suite"]["city"]["zipcode"],
-//         phone: json["phone"],
-//         website: json["website"],
-//         // company: json["company"][0]["name"]["catchPhrase"]["bs"],
-//       );
-
-
-// }
-
-// List<User> userFromJson(String str) =>
-//     List<User>.from(json.decode(str).map((x) => User.fromJson(x)));
-
-
-
-
-
 //Class that deserializes the json data from "Users"  and models it
 
 import 'dart:convert';
