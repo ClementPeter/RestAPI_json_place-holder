@@ -44,7 +44,6 @@ class RemoteServices {
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
-
       return userFromJson(json);
     } else {}
   }
