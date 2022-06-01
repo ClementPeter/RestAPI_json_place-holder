@@ -18,7 +18,7 @@ class RemoteServices {
     if (response.statusCode == 200) {
       var json = response.body;
       return postFromJson(json);
-    } else {
+    } else {      
       print('${response.statusCode}');
     }
   }
@@ -35,7 +35,6 @@ class RemoteServices {
     } else {}
   }
 
-  //
   //Function to make Network Calls from json placeholder "photos" request
   Future<List<User>?> getUsers() async {
     var uri = Uri.parse('https://jsonplaceholder.typicode.com/users');

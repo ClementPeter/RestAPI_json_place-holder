@@ -56,9 +56,6 @@ class _UserPageState extends State<UserPage> {
                 child: Column(
                   children: [
                     Constant.height1,
-                    // const SizedBox(
-                    //   height: 10.0,
-                    // ),
                     //ID,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -79,7 +76,6 @@ class _UserPageState extends State<UserPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Constant.height2,
-
                         Text(
                           'Name : ',
                           style: Constant.userPageText,
@@ -89,13 +85,9 @@ class _UserPageState extends State<UserPage> {
                           user![index].name,
                           style: Constant.userPageText,
                         ),
-                        Constant.width1,
-                        // const SizedBox(
-                        //   width: 40.0,
-                        // ),
+                        Constant.width3,                    
                         //username
                         Text('Username : ', style: Constant.userPageText),
-
                         Flexible(
                           child: Text(
                             user![index].username,
@@ -108,10 +100,6 @@ class _UserPageState extends State<UserPage> {
                       ],
                     ),
                     Constant.height2,
-                    // const SizedBox(
-                    //   height: 20.0,
-                    // ),
-                    //
                     //Email
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -141,11 +129,7 @@ class _UserPageState extends State<UserPage> {
                           user![index].address.street,
                           style: Constant.userPageText,
                         ),
-                        // const SizedBox(
-                        //   width: 10.0,
-                        // ),
                         Constant.width1,
-
                         Text(
                           user![index].address.city,
                           style: Constant.userPageText,
@@ -169,32 +153,19 @@ class _UserPageState extends State<UserPage> {
                           style: Constant.userPageText,
                         ),
                         Constant.width1,
-                        // const SizedBox(
-                        //   width: 10.0,
-                        // ),
                         Text(
                           "lat: ${user![index].address.geo.lat},",
                           style: Constant.userPageText,
                         ),
                         Constant.width1,
-                        // const SizedBox(
-                        //   width: 10.0,
-                        // ),
                         Text(
                           "long: ${user![index].address.geo.lng},",
                           style: Constant.userPageText,
                         ),
                         Constant.width1,
-                        // const SizedBox(
-                        //   width: 10.0,
-                        // ),
                       ],
                     ),
-
                     Constant.height2,
-                    // const SizedBox(
-                    //   height: 20.0,
-                    // ),
                     //phone number
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -209,9 +180,6 @@ class _UserPageState extends State<UserPage> {
                         ),
                       ],
                     ),
-                    // const SizedBox(
-                    //   height: 10.0,
-                    // ),
                     //Website
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
