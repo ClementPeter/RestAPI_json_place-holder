@@ -1,22 +1,42 @@
 import 'package:flutter/material.dart';
 
-const kTempTextStyle = TextStyle(
-  //fontFamily: 'Spartan MB',
-  fontSize: 100.0,
-);
+class Constant {
+  //Photo Page Constants
+  static BoxDecoration photoPageContainer = const BoxDecoration(
+    color: Colors.grey,
+    borderRadius: BorderRadius.all(
+      Radius.circular(10.0),
+    ),
+  );
+  //
 
-const kMessageTextStyle = TextStyle(
-  fontFamily: 'Spartan MB',
-  fontSize: 60.0,
-);
+  //Post Page Constants
+  static TextStyle postPageColor = const TextStyle(color: Colors.black);
 
-const kButtonTextStyle = TextStyle(
-    fontSize: 30.0,
-    fontFamily: 'Spartan MB',
-    //backgroundColor: Colors.white,
-    color: Colors.white);
+  static TextStyle postPageTitle =
+      const TextStyle(fontWeight: FontWeight.bold, fontSize: 24.0);
 
-const kConditionTextStyle = TextStyle(
-  fontSize: 100.0,
-);
+  static TextStyle postPageBody =
+      const TextStyle(fontStyle: FontStyle.italic, fontSize: 14.0);
 
+  static BoxDecoration postPageContainer = const BoxDecoration(
+    color: Color(0XFFdddddd),
+    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+  );
+
+  //User Page Constants
+  static const height1 = SizedBox(height: 10.0);
+  static const height2 = SizedBox(height: 20.0);
+
+  //width
+  static const width1 = SizedBox(width: 10.0);
+  static const width2 = SizedBox(width: 20.0);
+  static const width4 = SizedBox(width: 40.0);
+
+  static TextStyle userPageText = const TextStyle(fontSize: 16.0);
+
+  static BoxDecoration userPageContainer = const BoxDecoration(
+    color: Color(0XFFdddddd),
+    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+  );
+}

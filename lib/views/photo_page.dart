@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api_jsonplaceholder/constants/constants.dart';
 import 'package:rest_api_jsonplaceholder/models/photo.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
+//import 'package:rest_api_jsonplaceholder/constants/';
 
 class PhotoPage extends StatefulWidget {
   const PhotoPage({Key? key}) : super(key: key);
@@ -27,7 +29,6 @@ class _PhotoPageState extends State<PhotoPage> {
     photo = await RemoteServices().getPhotos();
     if (photo != null) {
       setState(() {
-        //print(" post: $photo");
         isLoaded = true;
       });
     }
@@ -48,17 +49,12 @@ class _PhotoPageState extends State<PhotoPage> {
             child: Container(
               height: 80,
               width: 80,
-              decoration: const BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(10.0),
-                ),
-              ),
+              decoration: Constant.photoPageContainer,
               child: Column(
                 children: [
                   Text(
                     photo![index].id.toString(),
-                    style: const TextStyle(color: Colors.black),
+                    style: Constant.postPageColor,
                   ),
                   Expanded(
                     child: isLoaded

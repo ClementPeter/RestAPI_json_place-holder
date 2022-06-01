@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api_jsonplaceholder/constants/constants.dart';
 import 'package:rest_api_jsonplaceholder/models/users.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 
@@ -51,31 +52,25 @@ class _UserPageState extends State<UserPage> {
               child: Container(
                 width: 300,
                 height: 250,
-                decoration: const BoxDecoration(
-                  color: Color(0XFFDDDDDD),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
+                decoration: Constant.userPageContainer,
                 child: Column(
                   children: [
-                    const SizedBox(
-                      height: 10.0,
-                    ),
+                    Constant.height1,
+                    // const SizedBox(
+                    //   height: 10.0,
+                    // ),
                     //ID,
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
-                        const Text(
+                        Text(
                           'id : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].id.toString(),
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
@@ -83,32 +78,23 @@ class _UserPageState extends State<UserPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          width: 20.0,
-                        ),
-                        const Text(
+                        Constant.height2,
+
+                        Text(
                           'Name : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         //name
                         Text(
                           user![index].name,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 40.0,
-                        ),
+                        Constant.width1,
+                        // const SizedBox(
+                        //   width: 40.0,
+                        // ),
                         //username
-                        const Text(
-                          'Username : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
-                        ),
+                        Text('Username : ', style: Constant.userPageText),
 
                         Flexible(
                           child: Text(
@@ -121,26 +107,23 @@ class _UserPageState extends State<UserPage> {
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
+                    Constant.height2,
+                    // const SizedBox(
+                    //   height: 20.0,
+                    // ),
                     //
                     //Email
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
-                        const Text(
+                        Text(
                           'email : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].email,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
@@ -150,36 +133,30 @@ class _UserPageState extends State<UserPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
-                        const Text(
+                        Text(
                           'address : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].address.street,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
+                        // const SizedBox(
+                        //   width: 10.0,
+                        // ),
+                        Constant.width1,
 
                         Text(
                           user![index].address.city,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
+                        // const SizedBox(
+                        //   width: 10.0,
+                        // ),
+                        Constant.width1,
                         Text(
                           user![index].address.suite,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
@@ -189,73 +166,64 @@ class _UserPageState extends State<UserPage> {
                       children: [
                         Text(
                           user![index].address.zipcode,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
+                        Constant.width1,
+                        // const SizedBox(
+                        //   width: 10.0,
+                        // ),
                         Text(
                           "lat: ${user![index].address.geo.lat},",
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
+                        Constant.width1,
+                        // const SizedBox(
+                        //   width: 10.0,
+                        // ),
                         Text(
                           "long: ${user![index].address.geo.lng},",
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
+                        Constant.width1,
+                        // const SizedBox(
+                        //   width: 10.0,
+                        // ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 20.0,
-                    ),
+
+                    Constant.height2,
+                    // const SizedBox(
+                    //   height: 20.0,
+                    // ),
                     //phone number
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           'phone : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].phone,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 10.0,
-                    ),
+                    // const SizedBox(
+                    //   height: 10.0,
+                    // ),
                     //Website
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
-                        const Text(
+                        Text(
                           'website : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].website,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
@@ -264,17 +232,13 @@ class _UserPageState extends State<UserPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         //id
-                        const Text(
+                        Text(
                           'Company : ',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                         Text(
                           user![index].company.name,
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                          ),
+                          style: Constant.userPageText,
                         ),
                       ],
                     ),
@@ -285,9 +249,8 @@ class _UserPageState extends State<UserPage> {
                         Flexible(
                           child: Text(
                             "${user![index].company.catchPhrase} ${user![index].company.bs} ",
-                            style: const TextStyle(
-                              fontSize: 16.0,
-                            ),
+                            textAlign: TextAlign.center,
+                            style: Constant.userPageText,
                           ),
                         ),
                       ],
@@ -303,7 +266,7 @@ class _UserPageState extends State<UserPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Text('Loading Users from API'),
-              SizedBox(height: 10.0),
+              Constant.height1,
               CircularProgressIndicator(),
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api_jsonplaceholder/constants/constants.dart';
 import 'package:rest_api_jsonplaceholder/models/post.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 
@@ -36,7 +37,7 @@ class _PostPageState extends State<PostPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
+    return Scaffold(
       body: Visibility(
         visible: isLoaded,
         child: ListView.builder(
@@ -46,10 +47,7 @@ class _PostPageState extends State<PostPage> {
               padding:
                   const EdgeInsets.only(top: 5, bottom: 5, left: 12, right: 12),
               child: Container(
-                decoration: const BoxDecoration(
-                  color: Color(0XFFdddddd),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
+                decoration: Constant.postPageContainer,
                 child: Row(
                   children: [
                     const SizedBox(
@@ -74,19 +72,9 @@ class _PostPageState extends State<PostPage> {
                             post![index].title,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24.0,
-                            ),
+                            style: Constant.postPageTitle,
                           ),
-                          Text(
-                            post![index].body,
-                            style: const TextStyle(
-                              //fontWeight: FontWeight.,
-                              fontStyle: FontStyle.italic,
-                              fontSize: 14.0,
-                            ),
-                          )
+                          Text(post![index].body, style: Constant.postPageBody)
                         ],
                       ),
                     )
@@ -105,7 +93,7 @@ class _PostPageState extends State<PostPage> {
               CircularProgressIndicator()
             ],
           ),
-        ),        
+        ),
       ),
     );
   }
