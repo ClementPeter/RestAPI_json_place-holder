@@ -4,7 +4,6 @@ import 'package:rest_api_jsonplaceholder/models/users.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 
 //Class that shows User Datails inside Individual Card
-
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
 
@@ -71,7 +70,7 @@ class _UserPageState extends State<UserPage> {
                         ),
                       ],
                     ),
-                    //Name, Username
+                    //Name
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -133,10 +132,7 @@ class _UserPageState extends State<UserPage> {
                         Text(
                           user![index].address.city,
                           style: Constant.userPageText,
-                        ),
-                        // const SizedBox(
-                        //   width: 10.0,
-                        // ),
+                        ),                  
                         Constant.width1,
                         Text(
                           user![index].address.suite,

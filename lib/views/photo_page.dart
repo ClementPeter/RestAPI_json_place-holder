@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rest_api_jsonplaceholder/constants/constants.dart';
 import 'package:rest_api_jsonplaceholder/models/photo.dart';
 import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
-//import 'package:rest_api_jsonplaceholder/constants/';
 
 class PhotoPage extends StatefulWidget {
   const PhotoPage({Key? key}) : super(key: key);

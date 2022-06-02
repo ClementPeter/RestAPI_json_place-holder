@@ -30,7 +30,7 @@ class Constant {
 
   static const width1 = SizedBox(width: 10.0);
   static const width2 = SizedBox(width: 20.0);
-  static const width3 = SizedBox(width: 40.0);
+  static const width3  = SizedBox(width: 40.0);
 
   static TextStyle userPageText = const TextStyle(fontSize: 16.0);
 
