@@ -31,9 +31,9 @@ API Source: https://jsonplaceholder.typicode.com/
 
 
 
-- [x] ## Mobile
+## - [x] ## Mobile
 
- <font size="5"> This is my text number 5</font> 
+ <font size="1"> This is my text number 5</font> 
 
 ![Screenshot_20220429-211725](https://user-images.githubusercontent.com/61213263/166076102-98c385fe-2e8e-47f6-80b6-820ecd54e131.png)
 
