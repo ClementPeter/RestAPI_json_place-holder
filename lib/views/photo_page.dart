@@ -11,10 +11,7 @@ class PhotoPage extends StatefulWidget {
 }
 
 class _PhotoPageState extends State<PhotoPage> {
-  //List to store Photo data from API
-  List<Photo>? photo;
-  //boolean to check if data has finished loading
-  var isLoaded = false;
+  //Init runs its command before build
 
   @override
   void initState() {
@@ -22,6 +19,11 @@ class _PhotoPageState extends State<PhotoPage> {
     super.initState();
     getData();
   }
+
+  //List to store Photo data from API
+  List<Photo>? photo;
+  //boolean to check if data has finished loading
+  var isLoaded = false;
 
   //function to get photos
   getData() async {

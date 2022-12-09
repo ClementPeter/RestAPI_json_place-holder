@@ -6,7 +6,6 @@ import 'package:rest_api_jsonplaceholder/services/remote_service.dart';
 //Class that shows User Datails inside Individual Card
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
-
   @override
   State<UserPage> createState() => _UserPageState();
 }
@@ -15,7 +14,7 @@ class UserPage extends StatefulWidget {
 class _UserPageState extends State<UserPage> {
   //List to store post data
   List<User>? user;
-  //boolean to trigger if loaded
+  //boolean to trigger is loaded
   var isLoaded = false;
 
   @override
@@ -30,8 +29,7 @@ class _UserPageState extends State<UserPage> {
   getData() async {
     user = await RemoteServices().getUsers();
     if (user != null) {
-      setState(() {
-        //print("post: $post");
+      setState(() {      
         isLoaded = true;
       });
     }

@@ -21,6 +21,7 @@ class RemoteServices {
     } else {      
       print('${response.statusCode}');
     }
+    return null;
   }
 
   // Function to make Network Calls from json placeholder "photos" request
@@ -28,11 +29,13 @@ class RemoteServices {
     var uri = Uri.parse('https://jsonplaceholder.typicode.com/photos');
     var response = await client.get(uri);
 
+
     //Check for response
     if (response.statusCode == 200) {
       var json = response.body;
       return photoFromJson(json);
     } else {}
+    return null;
   }
 
   //Function to make Network Calls from json placeholder "photos" request
@@ -45,5 +48,6 @@ class RemoteServices {
       var json = response.body;
       return userFromJson(json);
     } else {}
+    return null;
   }
 }

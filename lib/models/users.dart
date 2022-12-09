@@ -44,7 +44,7 @@ class User {
         "name": name,
         "username": username,
         "email": email,
-        "address": address.toJson(),
+        "address": address.toJson(), 
         "phone": phone,
         "website": website,
         "company": company.toJson(),
